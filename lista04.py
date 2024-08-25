@@ -138,3 +138,38 @@ for item in lista_numeros:
     print(item, end=' ')
 print("fim do programa")
 
+#questão07
+quantidade_valores = int(input('Digite a quantidade de valores que serão fornecidos para análise: '))
+lista = []
+for i in range(quantidade_valores):
+    valores = int(input('Digite um valor para ser analisado: '))
+    lista.append(valores)
+    menor_valor = min(lista)
+    maior_valor = max(lista)
+    media_aritmetica = sum(lista)/quantidade_valores
+print(f'Menor valor: {menor_valor}')
+print(f'Maior valor: {maior_valor}')
+print(f'Média aritmética: {media_aritmetica}')
+print('Fim do programa.')
+
+#questão08
+frase = str(input("escreva uma frase:"))
+
+sinais_pontuacao = ".,!?;:()[]}{\"'"
+for sinal in sinais_pontuacao:
+    frase = frase.replace(sinal, ' ')
+palavras = frase.split()
+print(palavras)
+contagem = {} 
+for palavra in palavras:
+    if palavra in contagem:
+        contagem[palavra] += 1
+    else:
+        contagem[palavra] = 1
+resultado = ""
+for palavra, quantidade in contagem.items():
+    resultado += f"{palavra}={quantidade}; "
+
+print(resultado)
+print("fim do programa.")
+
