@@ -78,6 +78,35 @@ for i in range(10):
 print(f'Quantidade de valores par: {pares}')
 print('Fim do programa.')
 
+#questão04
+lista1 = []
+lista2 = []
+lista_intercalada = []
+
+tamanho_lista = int(input("quanto elementos terá cada lista?"))
+
+for x in range(tamanho_lista):
+    valores_lista1 = str(input("insira elementos da lista 1:"))
+    lista1.append(valores_lista1)
+
+print("\n")
+
+for x in range(tamanho_lista):
+    valores_lista2 = str(input("insira elementos da lista 2:"))
+    lista2.append(valores_lista2)
+
+for item in range(tamanho_lista):
+    lista_intercalada.append(lista1[item])
+    lista_intercalada.append(lista2[item])
+
+print("\n")
+
+print(f"lista 1 = {lista1}")
+print(f"lista 2 = {lista2}")
+print(f"lista com valores intercalados da lista 1 e 2 = {lista_intercalada} \n")
+print("fim do programa.")
+
+
 #questão05
 quantidade_valores = int(input('Digite a quantidade de valores que serão fornecidos para análise: '))
 lista = []
